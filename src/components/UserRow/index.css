@@ -1,0 +1,99 @@
+.user-row {
+  height: 100px;
+  width: calc(100%);
+  display: flex;
+  flex-direction: row;
+  border-color: rgb(196, 189, 189);
+  border-style: solid;
+}
+.user-row > div:first-child {
+  margin: 0px 10px;
+  position: relative;
+  display: flex;
+  width: calc(100%);
+  flex-direction: row;
+  align-items: center;
+  border-bottom-style: solid;
+  border-color: rgb(196, 189, 189);
+}
+
+.avatar-icon {
+  margin: 10px;
+}
+
+@media screen and (max-width: 400px) {
+  .user-row-mq {
+    width: 400px;
+  }
+}
+
+.user-row-sub-container {
+  margin: 0px 10px;
+  min-width: calc(100% - 150px);
+}
+
+.user-row-title {
+  font-weight: bold;
+  font-size: 18px;
+  width: calc(100%);
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-row-desc {
+  display: flex;
+  flex: 1;
+  flex-direction: "row";
+  flex-wrap: wrap;
+  align-items: center;
+  font-weight: normal;
+  font-size: 14px;
+  color: black;
+  width: calc(100%);
+  margin: 5px 0px;
+}
+
+.dot {
+  background-color: rgb(106, 109, 109);
+  border-radius: 999px;
+  height: 5px;
+  width: 5px;
+  margin: 0px 10px 0px 5px;
+}
+
+.user-row-desc-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: calc(100%);
+}
+
+.user-row-desc-text svg {
+  color: rgb(106, 109, 109);
+}
+
+.user-row-desc-text svg,
+.user-row-desc-text > span,
+.user-row-desc > div > div:nth-child(2) {
+  margin-right: 5px;
+}
+
+.user-row-desc-text .text {
+  max-width: calc(100%);
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.delete-icon {
+  /* min-width: 25px; */
+  margin-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  color: var(--voilet);
+}

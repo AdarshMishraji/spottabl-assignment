@@ -1,0 +1,115 @@
+.search-box-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px 20px 0px;
+}
+
+.search-list-field {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  border: var(--greyBorder);
+  padding: 8px;
+  padding-bottom: 0px;
+  min-height: 32px;
+  border-radius: 5px 0px 0px 5px;
+  max-width: calc(100vw - 220px);
+  position: relative;
+  overflow-x: scroll;
+}
+
+.search-button-container {
+  display: flex;
+  flex: 1;
+  align-self: flex-start;
+}
+
+.search-button {
+  background-color: var(--voilet);
+  color: white;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 0px 5px 5px 0px;
+  padding: 0px 20px;
+  white-space: nowrap;
+  width: 125px;
+}
+
+.search-input {
+  border: none;
+  display: flex;
+  font-size: 16px;
+  outline: none;
+  margin-left: 8px;
+  min-height: 30px;
+  margin-bottom: 8px;
+}
+
+.search-button:active {
+  opacity: 0.75;
+}
+
+.selected-item-container {
+  background-color: var(--voiletLighter);
+  padding: 5px 8px;
+  border-radius: 5px;
+  margin: 0px 5px;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  color: var(--voilet);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected-item-container > div {
+  margin-right: 8px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .options-container-mq {
+    border: 1px solid black;
+    width: calc(100vw - 80px);
+  }
+}
+
+.options-container {
+  border: var(--greyBorder);
+  background-color: white;
+  min-height: 100px;
+  max-height: 50vh;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  left: 0px;
+  z-index: 999;
+  box-shadow: var(--boxShadow);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.options-view-container {
+  position: relative;
+}
+
+.empty-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(106, 109, 109);
+  text-align: center;
+  min-height: 100px;
+  margin: 0px 10px;
+  font-size: 20px;
+}
