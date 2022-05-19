@@ -41,10 +41,11 @@ export const Avatar = memo(({ name, size }: Props) => {
         backgroundColor,
         height: size,
         width: size,
-        fontSize: size / 2.5,
+        fontSize: size / 3,
       }}
     >
-      {nameSplited?.[0]?.[0]} {nameSplited?.[1]?.[0]}
+      {nameSplited?.[0]?.[0]}
+      {nameSplited?.[1]?.[0]}
     </div>
   );
 });
