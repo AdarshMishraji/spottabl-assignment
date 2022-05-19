@@ -14,7 +14,7 @@ import { OptionsContainer } from "./OptionsContainer";
 import { useDropdownItems } from "./useDropdownItems";
 import { UserContext } from "../../context";
 
-export const MultiSelectSearchBox = memo(() => {
+export const MultiSelectionSearchBox = memo(() => {
   const [searchText, setSearchText] = useState<string>("");
   const [inputFocused, setInputFocused] = useState(true);
   const [selectedIds, setSelectedIds] = useState<Set<number>>();

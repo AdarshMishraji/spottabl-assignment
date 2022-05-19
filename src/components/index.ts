@@ -1,4 +1,4 @@
-export * from "./MultiSelectedSearchBox";
+export * from "./MultiSelectionSearchBox";
 export * from "./Avatar";
 export * from "./UserRow";
 export * from "./Header";

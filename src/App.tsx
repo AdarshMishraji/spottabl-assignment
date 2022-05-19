@@ -1,4 +1,4 @@
-import { Card, Header, MultiSelectSearchBox, UserList } from "./components";
+import { Card, Header, MultiSelectionSearchBox, UserList } from "./components";
 import { locale } from "./constants";
 import { UserContextProvider } from "./context";
 
@@ -12,7 +12,7 @@ function App() {
         <Card>
           <Card.Title headerText={locale.customerSuccessManagers} />
           <Card.Body>
-            <MultiSelectSearchBox />
+            <MultiSelectionSearchBox />
             <UserList />
           </Card.Body>
         </Card>
