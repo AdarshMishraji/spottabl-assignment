@@ -24,7 +24,7 @@ export const MultiSelectSearchBox = memo(() => {
   const searchTextRef = useRef<any>();
   const optionContainerRef = useRef<any>();
 
-  const documentEventListener = useCallback((e: any) => {
+  const documentClickEventListener = useCallback((e: any) => {
     const container1 = document.querySelector(".search-list-field");
     const container2 = document.querySelector(".options-view-container");
 
@@ -36,8 +36,9 @@ export const MultiSelectSearchBox = memo(() => {
   }, []);
 
   useEffect(() => {
-    document.addEventListener("click", documentEventListener);
-    return () => document.removeEventListener("click", documentEventListener);
+    document.addEventListener("click", documentClickEventListener);
+    return () =>
+      document.removeEventListener("click", documentClickEventListener);
   }, []);
 
   const onViewClicked = useCallback(
@@ -86,7 +87,7 @@ export const MultiSelectSearchBox = memo(() => {
         <div
           className="search-list-field"
           style={{
-            borderColor: inputFocused ? "#3700b377" : "rgb(196, 189, 189)",
+            borderColor: inputFocused ? "var(--voilet)" : "var(--greyColor)",
           }}
         >
           {selectedItems?.map((item, index) => {
@@ -103,7 +104,8 @@ export const MultiSelectSearchBox = memo(() => {
             onBlur={() => setInputFocused(false)}
             ref={searchTextRef}
             style={{
-              width: searchText.length > 5 ? `${searchText.length}ch` : "5ch",
+              width:
+                searchText.length > 5 ? `${searchText.length + 2}ch` : "5ch",
             }}
             value={searchText}
             autoFocus

@@ -19,7 +19,7 @@ type Props = {
 export const OptionsContainer = memo(
   forwardRef(({ options, isVisible, onSelected }: Props, ref) => {
     const containerRef = useRef<HTMLDivElement>();
-    const [visible, setVisible] = useState(false);
+    const [visible, setVisible] = useState(true);
 
     const close = useCallback(() => {
       setVisible(false);

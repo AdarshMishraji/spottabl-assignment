@@ -3,19 +3,19 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 0px 20px 0px;
+  margin: 10px 0px 5px 0px;
 }
 
 .search-list-field {
+  border: var(--greyBorder);
+  border-radius: 5px 0px 0px 5px;
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  border: var(--greyBorder);
   padding: 8px;
   padding-bottom: 0px;
   min-height: 32px;
-  border-radius: 5px 0px 0px 5px;
   max-width: calc(100vw - 220px);
   position: relative;
   overflow-x: scroll;
@@ -107,7 +107,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(106, 109, 109);
+  color: var(--greyColor);
   text-align: center;
   min-height: 100px;
   margin: 0px 10px;

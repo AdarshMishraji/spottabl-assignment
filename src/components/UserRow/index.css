@@ -3,9 +3,14 @@
   width: calc(100%);
   display: flex;
   flex-direction: row;
-  border-color: rgb(196, 189, 189);
+  border-color: var(--greyColor);
   border-style: solid;
 }
+
+.user-row:hover {
+  background-color: #e0e0e0;
+}
+
 .user-row > div:first-child {
   margin: 0px 10px;
   position: relative;
@@ -14,7 +19,7 @@
   flex-direction: row;
   align-items: center;
   border-bottom-style: solid;
-  border-color: rgb(196, 189, 189);
+  border-color: var(--greyColor);
 }
 
 .avatar-icon {
@@ -56,7 +61,7 @@
 }
 
 .dot {
-  background-color: rgb(106, 109, 109);
+  background-color: var(--darkGreyColor);
   border-radius: 999px;
   height: 5px;
   width: 5px;
@@ -72,11 +77,10 @@
 }
 
 .user-row-desc-text svg {
-  color: rgb(106, 109, 109);
+  color: var(--darkGreyColor);
 }
 
 .user-row-desc-text svg,
-.user-row-desc-text > span,
 .user-row-desc > div > div:nth-child(2) {
   margin-right: 5px;
 }
@@ -90,10 +94,13 @@
 }
 
 .delete-icon {
-  /* min-width: 25px; */
   margin-right: 20px;
   display: flex;
   justify-content: flex-end;
   flex: 1;
   color: var(--voilet);
+}
+
+.delete-icon:active {
+  opacity: 0.5;
 }

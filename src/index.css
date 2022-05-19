@@ -17,8 +17,10 @@ code {
   --voilet: #1f31a1;
   --voiletLight: #1f31a177;
   --voiletLighter: #1f31a155;
-  --greyBorder: 1px solid rgb(196, 189, 189);
-  --boxShadow: 0px 5px 10px rgba(196, 189, 189, 1);
+  --greyColor: #e0e0e0;
+  --darkGreyColor: #707070;
+  --greyBorder: 1px solid var(--greyColor);
+  --boxShadow: 0px 5px 10px var(--greyColor);
 }
 
 #app-root {

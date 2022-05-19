@@ -6,22 +6,24 @@ export const UserList = memo(() => {
   const { removePreSelectedUser } = useContext(UserContext);
 
   return (
-    <UserContext.Consumer>
-      {(users) =>
-        users.preSelectedUsers.map((user, index) => {
-          return (
-            <UserRow
-              key={index}
-              {...user}
-              isFirst={index === 0}
-              isLast={index === users.preSelectedUsers.length - 1}
-              showBorder={true}
-              showDeleteIcon
-              onDeleteClick={() => removePreSelectedUser(user.id)}
-            />
-          );
-        })
-      }
-    </UserContext.Consumer>
+    <div style={{ marginTop: 25 }}>
+      <UserContext.Consumer>
+        {(users) =>
+          users.preSelectedUsers.map((user, index) => {
+            return (
+              <UserRow
+                key={index}
+                {...user}
+                isFirst={index === 0}
+                isLast={index === users.preSelectedUsers.length - 1}
+                showBorder={true}
+                showDeleteIcon
+                onDeleteClick={() => removePreSelectedUser(user.id)}
+              />
+            );
+          })
+        }
+      </UserContext.Consumer>
+    </div>
   );
 });
