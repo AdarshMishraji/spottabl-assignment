@@ -3,6 +3,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useMemo,
   useRef,
   useState,
 } from "react";
@@ -23,6 +24,11 @@ export const MultiSelectionSearchBox = memo(() => {
 
   const searchTextRef = useRef<any>();
   const optionContainerRef = useRef<any>();
+
+  const placeholder = useMemo(
+    () => ((selectedIds?.size || 0) === 0 ? locale.searchInputPlaceholder : ""),
+    [selectedIds]
+  );
 
   const documentClickEventListener = useCallback((e: any) => {
     const container1 = document.querySelector(".search-list-field");
@@ -103,12 +109,14 @@ export const MultiSelectionSearchBox = memo(() => {
             onFocus={() => setInputFocused(true)}
             onBlur={() => setInputFocused(false)}
             ref={searchTextRef}
-            style={{
-              width:
-                searchText.length > 5 ? `${searchText.length + 2}ch` : "5ch",
-            }}
+            placeholder={placeholder}
             value={searchText}
             autoFocus
+            size={
+              searchText.length + placeholder.length > 3
+                ? searchText.length + (placeholder.length || 10)
+                : 5
+            }
             className="search-input"
             onChange={(e) => setSearchText(e.target.value)}
           />
